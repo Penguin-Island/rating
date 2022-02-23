@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(state);
     for (let i = 0; i < stars.length; i++) {
         stars[i].addEventListener("mouseover", () => {
-            if (state == false) {
+            if (!state) {
                 console.log(state);
                 for (let j = 0; j <= i; j++) {
                     stars[j].style.color = "#f0da61";
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, false);
 
         stars[i].addEventListener("mouseout", () => {
-            if (state == false) {
+            if (!state) {
                 console.log(state);
                 for (let j = 0; j < stars.length; j++) {
                     stars[j].style.color = "#a09a9a";
